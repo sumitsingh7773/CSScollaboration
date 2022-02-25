@@ -53,12 +53,13 @@ div {
     100% {transform: rotate(360deg);}
 }
 #mover {
-    animation: mover 5s infinite; margin: 1%;
+    animation: movers 5s infinite; margin: 1%; flex-direction: row; position: relative;
 }
-@keyframes mover {
-    0% {left: 400px; top: 150px;}
-    25% {left: 600px; top: 150px;}
-    50% {left: 600px; top: 300px;}
-    75% {left: 10px; top: 10px;}
-    100% {left: 400px; top: 10px;}    
+
+@keyframes movers {
+    0% {left: 400px; top: 10px; background-color: red;}
+    25% {left: 750px; top: 10px; background-color: rgb(216, 214, 109);}
+    50% {left: 750px; top: 250px; background-color: rgb(0, 255, 21);}
+    75% {left: 10px; top: 250px; background-color: rgb(0, 238, 255);}
+    100% {left: 10px; top: 10px; background-color: rgb(204, 0, 255);}
 }
