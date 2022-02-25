@@ -17,18 +17,18 @@ div {
     display: inline-block; margin-left: 150px;
 }
 #square {
-    animation: updown 5s;
+    animation: updown 5s infinite alternate; position: relative;
 }
 @keyframes updown{
     0% {left: 10px; top: 10px;}
-    100% {left: 10px; top: 500px;}
+    100% {left: 10px; top: 380px;}
 }
 #circle {
-    border-radius: 50% 50% 50% 50%;
-    animation: infinite; animation: downup 5s;
+    border-radius: 50% 50% 50% 50%; position: relative;
+    animation: infinite alternate downup 5s;
 }
 @keyframes downup {
-    0% {left: 10px; top: 500px;}
+    0% {left: 10px; top: 280px;}
     100% {left: 10px; top: 10px;}
 }
 #rot1 {
@@ -42,8 +42,8 @@ div {
     animation: rotatey 5s infinite;
 }
 @keyframes rotatey {
-    0% { transform: rotateX(0deg);}
-    100% {transform: rotateX(360deg);} 
+    0% { transform: rotatey(0deg);}
+    100% {transform: rotatey(360deg);} 
 }
 #rot3{
     animation: rotate 5s infinite;
@@ -53,5 +53,12 @@ div {
     100% {transform: rotate(360deg);}
 }
 #mover {
-
+    animation: mover 5s infinite; margin: 1%;
+}
+@keyframes mover {
+    0% {left: 400px; top: 150px;}
+    25% {left: 600px; top: 150px;}
+    50% {left: 600px; top: 300px;}
+    75% {left: 10px; top: 10px;}
+    100% {left: 400px; top: 10px;}    
 }
